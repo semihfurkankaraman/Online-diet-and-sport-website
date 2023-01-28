@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Freelancer - Start Bootstrap Template</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/daily_calories.css">
+</head>
+
+
+<body>
+
+   <%- include("partials/nav")  %> 
+
+    <header>
+        <!-- SURVEY -->
+        <h1>Calculate Daily Calorie Needs</h1>
+  
+    <!-- Create Form -->
+    <form id="form" method ="post">
+
+        <div class="form-control">
+            <label>Gender?</label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio"  id="recommed-1"name="recommed"> Female</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2" name="recommed"> Male</input>
+            </label>
+        </div>
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="age" id="label-age"> Age? </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text" id="age" placeholder="Enter your age" />
+        </div>
+  
+        <div class="form-control">
+            <label for="height" id="label-height"> Height? (cm)</label>
+ 
+            <!-- Input Type Email-->
+            <input type="height" id="height" placeholder="Enter your height" />
+        </div>
+  
+        <div class="form-control">
+            <label for="weight" id="label-weight">
+                Weight? (kg)
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text" id="weight" placeholder="Enter your weight" />
+        </div>
+  
+        <div class="form-control">
+            <label for="activity" id="label-activity"> Your activity level during the day?</label>
+             
+            <!-- Dropdown options -->
+            <select name="activity" id="activity">
+                <option value="sedentary">Sedentary (I don't move or move very little.)</option>
+                <option value="lessactive">Less active (Lightly active life / I exercise 1-3 days a week.)</option>
+                <option value="middleactive">
+                    Moderately active (An active life / I exercise 3-5 days a week.)
+                </option>
+                <option value="veryactive">Very active (I live a very active life / I exercise 6-7 days a week.)</option>
+                <option value="hyperactive">Hyperactive (Professional athlete, athlete level.)</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="goal" id="label-goal">
+                What is your goal?
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="goal" id="goal">
+                <option value="loseweight">Lose weight, burn fat.</option>
+                <option value="gainweight">Gaining weight (Increasing muscle mass, clean bulking)</option>
+                <option value="fastgainweight">Fast weight gain (Your fat percentage may increase, dirty bulking)</option>
+                <option value="maintainingweight">Maintaining my weight</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="output">Your daily calorie needs: </label>
+            <p>
+                <%= random %> 
+            </p>
+        </div>
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+        
+
+
+    </header>
+
+    
+
+
+
+    <%- include("partials/footer")  %> 
+
+
+
+</body>
+
+</html>

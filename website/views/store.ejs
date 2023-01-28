@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Freelancer - Start Bootstrap Template</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/store.css">
+</head>
+
+
+<body>
+
+    <%- include("partials/nav")  %> 
+
+    <header class="menu" id="myElement">
+
+
+        <h1>STORE</h1>
+        <div class="box-container">
+            <div>
+
+                 
+                <% products.forEach(element=> { %>
+                    <div class="box">
+                        <% if (element.count>0) { %>
+                            <div class="box-head">
+                                <img src="./images/<%= element.image %>" alt="">                          
+                                <h3>
+                                    <%= element.name %>
+                                </h3>
+                                <p>  <%= element.product_definition %>  </p>
+                                <div class="price">
+                                    <p><%=element.price%> $</p>
+                                    
+                                </div>
+
+                            </div>
+                           
+                            <div class="box-bottom">
+                                <a href="/store/<%=element.product_id  %> " class="btn"> add to cart</a>
+                               
+                            </div>
+                          
+
+                        <% } %>
+                    </div>
+                <% }); %>
+
+               
+                   
+                
+                    
+
+            </div>
+        </div>
+        
+       
+    </header>
+
+    
+
+   
+
+
+
+
+
+    <%- include("partials/footer")  %> 
+
+</body>
+
+</html>

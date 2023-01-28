@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Freelancer - Start Bootstrap Template</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/online_sport.css">
+</head>
+
+
+<body>
+
+    <%- include("partials/nav")  %> 
+
+    <header>
+
+        <div class="container">
+            <form method="post">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="emailname">Email</label>
+              <input type="text" id="emailname" name="emailname" placeholder="Your email address..">
+
+              <label for="weight">Weight</label>
+              <input type="text" id="weight" name="weight" placeholder="Your weight..">
+
+              <label for="height">Height</label>
+              <input type="text" id="height" name="height" placeholder="Your height..">
+
+              <label for="phone_number">Phone Number</label>
+              <input type="text" id="phone_number" name="phone_number" placeholder="Your phone number..">
+              <label for="id_number">Id Number</label>
+              <input type="text" id="id_number" name="id_number" placeholder="Your id number..">
+
+              <label for="sport_type">Sport type</label>
+              <select id="sport_type" name="sport_type">
+                <option value="fitness">Fitness</option>
+                <option value="gymnastics">Gymnastics</option>
+                <option value="gaining_weight">Gaining weight</option>
+                <option value="losing_weight">Losing weight</option>
+                <option value="yoga">Yoga</option>
+              </select>
+          
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+
+              <label for="personal_trainer">Personal Trainer</label>
+              <select style="text-transform:capitalize;" id="personal_trainer" name="personal_trainer">
+                <% personal_trainer.forEach(element => { %>
+                  <option style="text-transform:capitalize;" value="<%= element.id %> "><%= element.firstname  %> <%= element.lastname %>  </option>
+                <% }) %>
+                
+                <!-- <option value="pt2">Pt 2</option>
+                <option value="pt3">Pt 3</option>
+                <option value="pt4">Pt 4</option> -->
+              </select>
+              
+              <!-- <a href="/os">Submit</a> -->
+              <input type="submit" value="SUBMIT">
+            </form>
+          </div>
+       
+        
+    </header>
+
+    
+
+
+
+    <%- include("partials/footer")  %> 
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Freelancer - Start Bootstrap Template</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+
+<body>
+
+    <%- include("partials/nav")  %> 
+
+    <header>
+        
+        
+        <div class="container">
+            <img id="profile-image" class="img-fluid" src="/images/healthsiyah.png" alt="">
+            <p class="motivation1">It's not a short time diet. </p>
+            <p class="motivation2">It is a long term lifestyle change.</p>
+
+            <hr class="star-light">
+
+            <div class="wrap">
+                <a href="/login" class="button"> LOGIN </a>
+               
+            </div>
+
+            
+
+            <div class="middlebutton">
+                <a href="/dp" class="wrapper"><span>DIET PROGRAMS</span></a>
+                <a href="/recipes" class="wrapper"><span>RECIPES</span></a>
+                <a href="/sp" class="wrapper"><span>SPORT PROGRAMS</span></a>
+               
+            </div>
+            
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <div class="container">
+            <!--
+
+                <hr class="star-dark">
+
+            //-->
+            
+            <div class="col">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img class="img-fluid-p" src="/images/diet.jpg" alt="">
+
+                         
+                    </a>
+                    <div class="text">
+                        <p>If you want to lose weight, you should look at these diet programs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img class="img-fluid-p" src="/images/recipe.jpg" alt="">
+                       
+                    </a>
+                    <div class="text">
+                        <p>For delicious and healthy recipes, you should look these recipes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img class="img-fluid-p" src="/images/sport.jpg" alt="">
+                    
+                    </a>
+                    <div class="text">
+                        <p>For a healthy and fit body, you should take a look at the carefully prepared sports lists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="text-uppercase">
+            About
+        </h2>
+        <hr class="star-light">
+
+        <div id="about-text" class="clearfix">
+            <div class="left">
+                <p class="text">
+                    This website brings together users, dietitians and fitness instructors.You can also get the sports equipment you need from our store page.
+                </p>
+            </div>
+            <div class="right">
+                <p class="text">
+                    If you want personalized diet and sports lists, do not forget to consult our dieticians and sports instructors.
+                </p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <%- include("partials/footer")  %> 
+
+
+
+</body>
+
+</html>

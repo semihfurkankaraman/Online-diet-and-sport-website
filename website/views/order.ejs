@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Freelancer - Start Bootstrap Template</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/order.css">
+</head>
+
+
+<body>
+
+    <%- include("partials/nav")  %> 
+    <header>
+
+        <div class="container">       
+            <form method="post">
+              <label for="card_number">Card Number</label>
+              <input type="text" id="card_number" name="card_number" placeholder="Card_Number..">
+          
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" placeholder="cvv..">
+
+              <label for="expiration_date">Expiration Date</label>
+              <input type="text" id="expiration_date" name="expiration_date" placeholder="02/27..">
+              
+              
+              <input type="submit" value="Confirm">
+
+              <h2>
+                <% if (message != "") { %>
+                    <%= message %> 
+                 
+                <% } %>
+              </h2>
+            </form>
+          </div>
+       
+        
+    </header>
+
+    
+
+
+
+    <%- include("partials/footer")  %> 
+
+
+
+</body>
+
+</html>

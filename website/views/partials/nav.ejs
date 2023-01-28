@@ -1,0 +1,137 @@
+<nav>
+    <div class="container clearfix">
+
+        <div class="logo-foto">
+            <img src="/images/healthyesil.png" alt="" width="45px">
+
+        </div>
+
+        <div id="logo-box">
+            <a href="/" class="logo text-uppercase">
+                KeepFit
+            </a>
+        </div>
+
+        <div id="nav-links" class="responsive">
+            <% if (user_type != "pt" && user_type !="dietician" && user_type !="admin") { %>
+                <ul>
+                    <li class="nav-item text-uppercase nav-icon">
+                        <a href="/" class="nav-link">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/od" class="nav-link">
+                            Online Diet
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/os" class="nav-link">
+                            Online sport
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/dc" class="nav-link">
+                            Daily calories
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/store" class="nav-link">
+                            Store
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/card" class="nav-link">
+
+                            <i style="font-size:24px" class="fa">&#xf07a;</i>
+                        </a>
+                    </li>                    
+                        <% if (sessionname==1) { %>
+                            <% if (user_type != "undefined") { %>
+
+                                <% if (user_type == "user") { %>
+                                    <li class="nav-item text-uppercase">
+                                        <a href="/myacc" class="nav-link">
+                                            <img src="./images/user.png" alt="">
+                                        </a>
+                                    </li>                              
+                                <% } %>                            
+                            <% } %>
+                            
+                        <% } %> 
+
+                </ul>
+            <% } %>  
+
+            <% if (user_type == "pt") { %>
+                <ul>
+                    <li class="nav-item text-uppercase nav-icon">
+                        <a href="/" class="nav-link">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/sr" class="nav-link">
+                            Sport Request
+                        </a>
+                    </li>  
+                    <li class="nav-item text-uppercase">
+                        <a href="/store" class="nav-link">
+                            Store
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/logout" class="nav-link">
+                            Logout
+                        </a>
+                    </li>
+                    
+             
+            <% } %>
+
+            <% if (user_type == "dietician") { %>
+                <ul>
+                    <li class="nav-item text-uppercase nav-icon">
+                        <a href="/" class="nav-link">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/dr" class="nav-link">
+                            Diet Request
+                        </a>
+                    </li>    
+                    <li class="nav-item text-uppercase">
+                        <a href="/store" class="nav-link">
+                            Store
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/logout" class="nav-link">
+                            Logout
+                        </a>
+                    </li>       
+            <% } %>
+
+            <% if (user_type == "admin") { %>
+                <ul>
+                    <li class="nav-item text-uppercase nav-icon">
+                        <a href="/" class="nav-link">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="/ap" class="nav-link">
+                            Admin Page
+                        </a>
+                    </li>                
+                    <li class="nav-item text-uppercase">
+                        <a href="/logout" class="nav-link">
+                            Logout
+                        </a>
+                    </li>       
+            <% } %>
+                    
+        </div>
+    </div>
+</nav>
